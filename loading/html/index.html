@@ -1,9 +1,10 @@
 <html>
     <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" media="screen" href="main.css">
     </head>
-    <a id="play-pause-button" class="fa fa-play"></a>    
+    <a id="play-pause-button" class="fa fa-play"></a>
     <body class="bg">
         <div class="container">
             <img src="CSRP.png"> 
@@ -21,6 +22,105 @@
             <div class="progressBar"></div>
         </div>
         <script src="main.js"></script>
-    </body>        
+        <div class="fix">
+            <center> <h3>You are connecting to Code Seven Roleplay. Please wait ...</h3></center>
+ 
+             <center>
+                  <p class="text">Do not punch a ramdom player to death with no justifiable in-charater reason</p>           
+                    <p class="text">Do not rob somebody standing in front of the bank, police station or hospital.</p>
+                     <p class="text">Do not make a character with the name "Mike Hawk" simply because it is comical</p>
+                     <p class="text">Do not create a character named "Justin Bieber" because you want to roleplay a superstar.</p>
+                    <p class="text">Do not Use a name like "RabbitKiller44".</p>
+                   <p class="text">Respect other players</p>
+                   <p class="text">You are awesome!</p>
+                 </center>
+     </div>        
+    </body>           
 </html>
+
+<!-- Script of fivem keks loading screen. !--> 			
+<script type="text/javascript">
+    var count = 0;
+    var thisCount = 0;
+    const handlers = {
+        startInitFunctionOrder(data)
+        {
+            count = data.count;
+    
+            document.querySelector('.loadbar h3').innerHTML += emoji[data.type][data.order - 1] || '';
+        },
+    
+        initFunctionInvoking(data)
+        {
+            document.querySelector('.scroll').style.left = '0%';
+            document.querySelector('.scroll').style.width = ((data.idx / count) * 100) + '%';
+        },
+    
+        startDataFileEntries(data)
+        {
+            count = data.count;
+    
+            document.querySelector('.loadbar h3').innerHTML += "\u{1f358}";
+        },
+    
+        performMapLoadFunction(data)
+        {
+            ++thisCount;
+    
+            document.querySelector('.scroll').style.left = '0%';
+            document.querySelector('.scroll').style.width = ((thisCount / count) * 100) + '%';
+        },
+    
+        onLogLine(data)
+        {
+            document.querySelector('.loadbar p').innerHTML = data.message + "..!";
+        }
+    };
+    
+    window.addEventListener('message', function(e)
+    {
+        (handlers[e.data.eventName] || function() {})(e.data);
+    });
+    </script>
+    
+     <!-- Script for the text changer !--> 
+    <script>
+    (function() {
+        //used for text
+        var text = $(".text");
+        var quoteIndex = -1;
+    
+        function showNextQuote() {
+            ++quoteIndex;
+            text.eq(quoteIndex % text.length)
+                .fadeIn(2000)//fade in time
+                .delay(2000)//delay time
+                .fadeOut(2000, showNextQuote);//fase out next quote.
+        }
+    
+        showNextQuote();
+    
+    })();
+    (function() {
+        //Ignore tis function, it is used for the twoquote style
+        var text = $(".text2");
+        var quoteIndex = -1;
+    
+        function showNextQuote() {
+            ++quoteIndex;
+            text.eq(quoteIndex % text.length)
+                .fadeIn(2000)
+                .delay(2000)
+                .fadeOut(2000, showNextQuote);
+        }
+    
+        showNextQuote();
+    
+    })
+    </script>
+        </body>
+    </html>
+
+
+
 

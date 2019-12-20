@@ -47,3 +47,22 @@
     font-size: 50px;
     cursor: pointer;
   }
+
+
+/* THIS IS TO SEPERATE THE DIFFERENT PARTS; BELOW IS THE RULES AND MESSAGES CONFIG. */
+body{ margin: 0px;padding: 0px;}
+
+
+.fix{position: absolute; left: 5%;right: 5%;bottom: 10%;z-index: 5;color: #fff;font-family: "Segoe UI";}
+.text {
+    display:none;
+    color:#FFF;
+    font-family: Lucida Sans Unicode;
+    background-color: rgba(52, 152, 219,0.3);
+}
+
+.fix p 
+{font-size: 22px;  /* Size text of the rules */ 
+margin-left: 3px;margin-top: 0px;}
+
+.fix h2, .fix h3 { font-family:  BankGothic;font-size:  40px;margin: 0px;color: #FFF;}  
