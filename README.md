@@ -15,10 +15,10 @@ If you wish to change the logo please change `<img src="CSRP.png">` to the pictu
 
 Checklist for what to add to this loading screen:
 
-[X] Loading Bar
-[X] Animated Loading Bar (Oooo Fancy]
-[x] Background Colour Support
-[ ] Background Image Support
-[ ] Pauseable Music
-[ ] Music Control Buttons
-[ ] Custom Text
+- [X] Loading Bar
+- [X] Animated Loading Bar (Oooo Fancy]
+- [x] Background Colour Support
+- [ ] Background Image Support
+- [ ] Pauseable Music
+- [ ] Music Control Buttons
+- [ ] Custom Text
