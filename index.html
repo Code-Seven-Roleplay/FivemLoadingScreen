@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" media="screen" href="main.css">
+    </head>
+    <a id="play-pause-button" class="fa fa-play"></a>
+    <body class="bg">
+        <div class="container">
+            <img src="CSRP.png"> 
+        </div>
+        <div id="audio">
+        <audio controls loop autoplay hidden>
+            <source src="song.mp3" type="audio/mp3">
+        </audio>
+        <script>
+            var vid = document.getElementById("Loading");
+            vid.volume = 0.2
+           </script>        
+        </div>
+        <div class="loadbar">
+            <div class="progressBar"></div>
+        </div>
+        <script src="main.js"></script>
+        <div class="fix">
+            <center> <h3>You are connecting to Code Seven Roleplay. Please wait ...</h3></center>
+            <center> <h4>For a full list of rules join our discord @ https://discord.me/codesevenroleplay </h4></center>
+ 
+            <center>
+                <p class="text">Armored Vehicles / Vehicles with weapons are not allowed to use at any time! This goes for unrealistic vehicles such as huge trucks not fitting on road etc.</ p>           
+                <p class="text">No intention to roleplay (NITRP) counts as going out of character, randomly interfering with a scene, breaking peacetime.</p>
+                <p class="text">Random Deathmatch (RDM) is not allowed at any time!-</p> 
+                <p class="text">VDM is not permitted!</p>
+                <p class="text">If a staff memeber freezes you do not leave. or you will be perma banned</p>
+                <p class="text">Respect other players</p>
+                <p class="text">You are awesome!</p>
+                <p class="text">Firestations and Hospitals are now safe-zones, no killing or violent roleplay in these zones</p>
+                <p class="text">Repeating violent roleplay is a kick without warning</p>
+                <p class="text">Reminder of new life rule, don't return back to the place you got killed within 10 minutes</p>
+                <p class="text">To become a officer, apply in our law-discord</p>
+            </center>
+     </div>        
+    </body>           
+</html>
+
+<!-- Script of fivem keks loading screen. !--> 			
+<script type="text/javascript">
+    var count = 0;
+    var thisCount = 0;
+    const handlers = {
+        startInitFunctionOrder(data)
+        {
+            count = data.count;
+    
+            document.querySelector('.loadbar h3').innerHTML += emoji[data.type][data.order - 1] || '';
+        },
+    
+        initFunctionInvoking(data)
+        {
+            document.querySelector('.scroll').style.left = '0%';
+            document.querySelector('.scroll').style.width = ((data.idx / count) * 100) + '%';
+        },
+    
+        startDataFileEntries(data)
+        {
+            count = data.count;
+    
+            document.querySelector('.loadbar h3').innerHTML += "\u{1f358}";
+        },
+    
+        performMapLoadFunction(data)
+        {
+            ++thisCount;
+    
+            document.querySelector('.scroll').style.left = '0%';
+            document.querySelector('.scroll').style.width = ((thisCount / count) * 100) + '%';
+        },
+    
+        onLogLine(data)
+        {
+            document.querySelector('.loadbar p').innerHTML = data.message + "..!";
+        }
+    };
+    
+    window.addEventListener('message', function(e)
+    {
+        (handlers[e.data.eventName] || function() {})(e.data);
+    });
+    </script>
+    
+     <!-- Script for the text changer !--> 
+    <script>
+    (function() {
+        //used for text
+        var text = $(".text");
+        var quoteIndex = -1;
+    
+        function showNextQuote() {
+            ++quoteIndex;
+            text.eq(quoteIndex % text.length)
+                .fadeIn(2000)//fade in time
+                .delay(2000)//delay time
+                .fadeOut(2000, showNextQuote);//fase out next quote.
+        }
+    
+        showNextQuote();
+    
+    })();
+    (function() {
+        //Ignore tis function, it is used for the twoquote style
+        var text = $(".text2");
+        var quoteIndex = -1;
+    
+        function showNextQuote() {
+            ++quoteIndex;
+            text.eq(quoteIndex % text.length)
+                .fadeIn(2000)
+                .delay(2000)
+                .fadeOut(2000, showNextQuote);
+        }
+    
+        showNextQuote();
+    
+    })
+    </script>
+        </body>
+    </html>
+
+
+
+
