@@ -11,3 +11,14 @@ If you want to change the background please change the colour value in main.css
 
 If you wish to change the logo please change `<img src="CSRP.png">` to the picture of your choosing, e.g.
   `<img src="TEST.png">`.
+
+
+Checklist for what to add to this loading screen:
+
+[X] Loading Bar
+[X] Animated Loading Bar (Oooo Fancy]
+[x] Background Colour Support
+[ ] Background Image Support
+[ ] Pauseable Music
+[ ] Music Control Buttons
+[ ] Custom Text
