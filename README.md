@@ -21,4 +21,4 @@ Checklist for what to add to this loading screen:
 - [ ] Background Image Support
 - [ ] Pauseable Music
 - [ ] Music Control Buttons
-- [ ] Custom Text
+- [X] Custom Text
