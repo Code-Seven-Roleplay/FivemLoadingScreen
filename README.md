@@ -19,6 +19,6 @@ Checklist for what to add to this loading screen:
 - [X] Animated Loading Bar (Oooo Fancy]
 - [x] Background Colour Support
 - [ ] Background Image Support
-- [ ] Pauseable Music
-- [ ] Music Control Buttons
+- [X] Pauseable Music
+- [X] Music Control Buttons
 - [X] Custom Text
